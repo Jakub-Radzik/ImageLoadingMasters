@@ -1,9 +1,11 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import TestPageLayout from "./components/TestPageLayout";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <TestPageLayout>
+      <div></div>
+    </TestPageLayout>
+  );
 }
 
 export default App;
