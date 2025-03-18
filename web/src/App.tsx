@@ -1,9 +1,10 @@
 import TestPageLayout from "./components/TestPageLayout";
+import { ReferenceImage } from "./test_cases/ReferenceImage";
 
 function App() {
   return (
     <TestPageLayout>
-      <div></div>
+      <ReferenceImage />
     </TestPageLayout>
   );
 }

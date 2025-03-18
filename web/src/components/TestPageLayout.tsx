@@ -6,7 +6,7 @@ interface LayoutProps {
 
 const TestPageLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 w-full max-w-[2560px] mx-auto">
+    <div className="min-h-screen bg-gray-100 text-gray-800 w-full max-w-[2560px] mx-auto flex flex-col justify-between">
       <header className="bg-blue-600 text-white p-4 shadow-md">
         <h1 className="text-2xl font-semibold text-center">
           Testowanie Ładowania Obrazów
