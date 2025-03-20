@@ -6,6 +6,7 @@ function App() {
   return (
     <TestPageLayout>
       <Routes>
+        <Route path="/" element={<ReferenceImage />} />
         <Route path="/ref" element={<ReferenceImage />} />
       </Routes>
     </TestPageLayout>
