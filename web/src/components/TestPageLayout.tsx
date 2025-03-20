@@ -1,10 +1,8 @@
-import React from "react";
-
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-const TestPageLayout: React.FC<LayoutProps> = ({ children }) => {
+export const TestPageLayout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-gray-100 text-gray-800 w-full max-w-[2560px] mx-auto flex flex-col justify-between">
       <header className="bg-blue-600 text-white p-4 shadow-md">
@@ -29,5 +27,3 @@ const TestPageLayout: React.FC<LayoutProps> = ({ children }) => {
     </div>
   );
 };
-
-export default TestPageLayout;
