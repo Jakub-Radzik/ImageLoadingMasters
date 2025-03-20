@@ -3,14 +3,14 @@ import { DIRECTORY, directoryToUrlMap } from "../utils/url";
 
 export const ReferenceImage = () => {
   const [searchParams] = useSearchParams();
-  const dir = searchParams.get("dir") as DIRECTORY;
+  const dir = searchParams.get("dir") as DIRECTORY | null;
   const img = parseInt(searchParams.get("img") || "0");
   const w = parseInt(searchParams.get("w") || "0");
   const q = parseInt(searchParams.get("q") || "-1");
   const interlaced = searchParams.get("interlaced") === "true" ? true : false;
 
-  const urlGen = directoryToUrlMap[dir];
-  const url = urlGen(img, w, q, interlaced);
+  const urlGen = dir ? directoryToUrlMap[dir] : null;
+  const url = urlGen ? urlGen(img, w, q, interlaced) : "";
 
   return (
     <>

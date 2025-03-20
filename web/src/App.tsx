@@ -1,6 +1,6 @@
+import { Route, Routes } from "react-router-dom";
 import { TestPageLayout } from "./components/TestPageLayout";
 import { ReferenceImage } from "./test_cases/ReferenceImage";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
