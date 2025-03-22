@@ -1,0 +1,11 @@
+{
+  "name": "images",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "image-ssim": "^0.2.0",
+    "sharp": "^0.33.5"
+  }
+}
