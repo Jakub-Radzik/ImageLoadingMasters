@@ -1,0 +1,10 @@
+/JPG/*
+/PNG/*
+/AVIF_LOSSY/*
+/AVIF_LOSSLESS/*
+/WEBP_LOSSY/*
+/WEBP_LOSSLESS/*
+/node_modules
+1.png
+2.png
+3.png

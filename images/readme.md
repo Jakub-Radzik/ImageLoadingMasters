@@ -1,16 +1,17 @@
-Lets use tiff file as reference.
-
-# Tiff to png (all compression levels 0-9)
-```
-convert 1_ref_tiff.tiff -define png:compression-level=9 1_compress_9.png
-
-convert 1_ref_tiff.tiff -define png:compression-level=0 1_compress_0.png
+In order to prepare images move your file to root directory
+and execute following commands:
 
 ```
+node jpg <file_name>
+node png <file_name>
+node webp <file_name>
+node avif_lossy <file_name>
+node avif_lossless <file_name>
+node scale <file_name>
+```
 
-# Resize image to widht with the same aspect ratio
+After that for creating excel files for data analysis do:
 
 ```
-convert 1.tiff -compress none -resize 800x 1_w800.tiff
-
+node rf
 ```

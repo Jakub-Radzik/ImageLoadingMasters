@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 
 // Ensure input file is provided
 const inputFile = process.argv[2];
@@ -14,13 +14,13 @@ if (!inputFile) {
 const baseName = path.basename(inputFile, path.extname(inputFile));
 
 // Quality levels for lossy AVIF
-const lossyLevels = [9,8,7,6,5,4,3,2,1,0];
+const losslessLevels = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 
 // Different sizes (empty for original, '800' for 800px width)
-const sizes = ['1920', '800', '400'];
+const sizes = ["1920", "800", "400"];
 
 // Create output directory if it doesn't exist
-const outputDir = 'AVIF_LOSSLESS';
+const outputDir = "AVIF_LOSSLESS";
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
@@ -29,7 +29,7 @@ if (!fs.existsSync(outputDir)) {
 const runCommand = async (cmd) => {
   try {
     console.log(`Running: ${cmd}`);
-    execSync(cmd, { stdio: 'inherit' });
+    execSync(cmd, { stdio: "inherit" });
   } catch (error) {
     console.error(`Error executing: ${cmd}`);
     console.error(error.message);
@@ -39,17 +39,17 @@ const runCommand = async (cmd) => {
 // Process images sequentially
 const processImages = async () => {
   for (const size of sizes) {
-    for (const level of lossyLevels) {
-      const outputFile = `${baseName}${size ? '_w' + size : ''}_lvl${level}_lossless.avif`;
+    for (const level of losslessLevels) {
+      const outputFile = `${baseName}${size ? "_w" + size : ""}_lvl${level}_lossless.avif`;
       const outputPath = `${outputDir}/${outputFile}`;
-      const resizeOption = size ? `-resize ${size}x` : '';
+      const resizeOption = size ? `-resize ${size}x` : "";
 
-      const cmd = `convert "${inputFile}" ${resizeOption} -define heic:lossless=true -define heic:speed=${level} "${outputPath}"`;
+      const cmd = `magick "${inputFile}" ${resizeOption} -define avif:lossless=true "${outputPath}"`;
 
       await runCommand(cmd); // Process one by one
     }
   }
-  console.log('✅ All images processed sequentially.');
+  console.log("✅ All images processed sequentially.");
 };
 
 // Run the processing function
