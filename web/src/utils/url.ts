@@ -3,14 +3,9 @@
 const BUCKET_URL =
   "https://images-loading-bucket-eu.s3.eu-central-1.amazonaws.com";
 
-export type FORMAT =
-  | "avif"
-  | "webp"
-  | "jpg"
-  | "png"
-  | "ref"; // ! ref files are png
+export type FORMAT = "avif" | "webp" | "jpg" | "png" | "ref"; // ! ref files are png
 
-export type Compression = 'lossy' | 'lossless'
+export type Compression = "lossy" | "lossless";
 
 type GenUrlFunction = (
   img: number,
@@ -20,16 +15,10 @@ type GenUrlFunction = (
   interlaced?: boolean
 ) => string;
 
-const generateAvifUrl: GenUrlFunction = (
-  img,
-  width,
-  q_l,
-  c,
-  interlaced
-) => {
-  const q_l_key = c === 'lossless' ? 'lvl' : 'q' ;
+const generateAvifUrl: GenUrlFunction = (img, width, q_l, c, interlaced) => {
+  const q_l_key = c === "lossless" ? "lvl" : "q";
   return `${BUCKET_URL}/AVIF_${c.toUpperCase()}/${img}_w${width}_${q_l_key}${q_l}_${c}.avif`;
-}
+};
 
 const generateWebpUrl: GenUrlFunction = (
   img: number,
@@ -37,7 +26,10 @@ const generateWebpUrl: GenUrlFunction = (
   q_l: number,
   c,
   interlaced?: boolean
-) => `${BUCKET_URL}/WEBP_${c.toUpperCase()}/${img}_w${width}_q${q_l}_${c}.webp`;
+) => {
+  const q_l_key = c === "lossless" ? "lvl" : "q";
+  return `${BUCKET_URL}/WEBP_${c.toUpperCase()}/${img}_w${width}_${q_l_key}${q_l}_${c}.webp`;
+};
 
 const generateJpgUrl: GenUrlFunction = (
   img: number,
@@ -72,9 +64,9 @@ const generateReferenceFileUrl: GenUrlFunction = (
 // There is a chance to make it one function instead of map and functions
 // But for now it is not a concern - If it works dont touch
 export const directoryToUrlMap: Record<FORMAT, GenUrlFunction> = {
-  'avif': generateAvifUrl,
-  'webp': generateWebpUrl,
-  'jpg': generateJpgUrl,
-  'png': generatePngUrl,
-  'ref': generateReferenceFileUrl,
+  avif: generateAvifUrl,
+  webp: generateWebpUrl,
+  jpg: generateJpgUrl,
+  png: generatePngUrl,
+  ref: generateReferenceFileUrl,
 };
