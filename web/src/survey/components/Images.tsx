@@ -4,7 +4,7 @@ import { useState } from "react";
 type ImagesProps = {
   imageA: string;
   imageB: string;
-  onClick: (response: "A" | "B") => void;
+  onClick: (response: "Obraz A" | "Obraz B") => void;
 };
 
 export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
@@ -22,12 +22,12 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
   const onAClick = () => {
     setImageALoaded(false);
     setImageBLoaded(false);
-    allLoaded && onClick("A");
+    allLoaded && onClick("Obraz A");
   };
   const onBClick = () => {
     setImageALoaded(false);
     setImageBLoaded(false);
-    allLoaded && onClick("B");
+    allLoaded && onClick("Obraz B");
   };
 
   const allLoaded = isImageALoaded && isImageBLoaded;
