@@ -96,6 +96,27 @@ export const Survey = () => {
           dokładnie przyjrzeć się obu obrazom i zdecydować, który wygląda lepiej
           pod względem jakości.
         </p>
+        <p
+          className="text-lg"
+          style={{
+            backgroundColor: "#e20000",
+          }}
+        >
+          <b>
+            <ul>
+              <li>W ankecie pojawiają się 3 typy obrazów.</li>
+              <li>
+                {" "}
+                Jeśli nie widzisz różnic między nimi -{" "}
+                <u>to dobrze, o to chodzi.</u> i zaznacz że nie widzisz różnicy
+              </li>
+              <li>
+                Jeśli widzisz kolejny raz tą samą parę obrazów -{" "}
+                <u> to też dobrze, bo o to chodzi</u>
+              </li>
+            </ul>
+          </b>
+        </p>
 
         <p className="text-left">
           <b>Instrukcja:</b>
