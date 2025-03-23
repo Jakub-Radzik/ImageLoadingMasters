@@ -30,8 +30,27 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
     onClick("B");
   };
 
+  const allLoaded = isImageALoaded && isImageBLoaded;
+
   return (
     <div className="p-4">
+      {!allLoaded && (
+        <div
+          style={{
+            position: "absolute",
+            zIndex: 1000,
+            background: "rgba(255, 255, 255, 0.9)",
+            height: 500,
+            width: "100%",
+          }}
+        >
+          <div className="flex justify-center">
+            Ładowanie obrazów
+            <Spin size="large" />
+          </div>
+        </div>
+      )}
+
       <div className="flex flex-col sm:flex-row gap-4">
         <div
           className={`flex flex-col w-full sm:w-1/2 items-center ${wrapperClasses}`}
