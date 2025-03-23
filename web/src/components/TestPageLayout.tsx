@@ -1,9 +1,10 @@
 interface LayoutProps {
   children: React.ReactNode;
+  show?: boolean;
 }
 
-export const TestPageLayout: React.FC<LayoutProps> = ({ children }) => {
-  return (
+export const TestPageLayout: React.FC<LayoutProps> = ({ children, show }) => {
+  return show ? (
     <div className="min-h-screen bg-gray-100 text-gray-800 w-full max-w-[2560px] mx-auto flex flex-col justify-between">
       <header className="bg-blue-600 text-white p-4 shadow-md">
         <h1 className="text-2xl font-semibold text-center">
@@ -25,5 +26,7 @@ export const TestPageLayout: React.FC<LayoutProps> = ({ children }) => {
         © {new Date().getFullYear()} Testowanie Obrazów - React & TypeScript
       </footer>
     </div>
+  ) : (
+    <>{children}</>
   );
 };
