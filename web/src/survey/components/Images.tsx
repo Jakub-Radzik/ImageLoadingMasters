@@ -22,12 +22,12 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
   const onAClick = () => {
     setImageALoaded(false);
     setImageBLoaded(false);
-    onClick("A");
+    allLoaded && onClick("A");
   };
   const onBClick = () => {
     setImageALoaded(false);
     setImageBLoaded(false);
-    onClick("B");
+    allLoaded && onClick("B");
   };
 
   const allLoaded = isImageALoaded && isImageBLoaded;
