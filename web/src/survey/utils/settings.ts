@@ -6,7 +6,7 @@ const pairs: { formatA: FORMAT; formatB: FORMAT }[] = [
   { formatA: "webp", formatB: "jpg" },
 ];
 
-const images = [1, 2, 3];
+const images = [2, 1, 3];
 const qualities = [10, 40, 90];
 
 export const settings = pairs.flatMap(({ formatA, formatB }) =>

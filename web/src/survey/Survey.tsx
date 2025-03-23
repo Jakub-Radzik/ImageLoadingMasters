@@ -96,6 +96,9 @@ export const Survey = () => {
           dokładnie przyjrzeć się obu obrazom i zdecydować, który wygląda lepiej
           pod względem jakości.
         </p>
+        <p>
+          <b>Ankieta zapisuje się dopiero po jej ukończeniu</b>
+        </p>
         <p
           className="text-lg"
           style={{
@@ -205,7 +208,12 @@ export const Survey = () => {
   }
 
   return (
-    <div className="p-6 mx-auto">
+    <div
+      className="p-6 mx-auto"
+      style={{
+        maxWidth: "900px",
+      }}
+    >
       <div>
         <h1 className="font-semibold">Ankieta</h1>
         <h2 className="mb-4">
