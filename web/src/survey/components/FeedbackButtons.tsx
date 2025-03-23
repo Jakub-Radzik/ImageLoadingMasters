@@ -7,9 +7,9 @@ type FeedbackButtonsProps = {
 export const FeedbackButtons = ({ onClick }: FeedbackButtonsProps) => {
   const options = [
     "Obraz A",
-    "Obraz B",
     "Oba jakościowo dobre",
     "Oba jakościowe złe",
+    "Obraz B",
   ];
 
   const errorOptions = [
@@ -21,10 +21,10 @@ export const FeedbackButtons = ({ onClick }: FeedbackButtonsProps) => {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h3 className="text-sm font-semibold text-gray-700 mb-2 ml-1">
-          Inne odpowiedzi dotyczące jakości
-        </h3>
-        <div className="flex flex-wrap gap-4">
+        <p className="text-sm font-semibold text-gray-700 mb-2 ml-1 flex flex-row justify-center">
+          Odpowiedzi dotyczące jakości
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
           {options.map((label) => (
             <Button
               key={label}
@@ -36,12 +36,12 @@ export const FeedbackButtons = ({ onClick }: FeedbackButtonsProps) => {
           ))}
         </div>
       </div>
-
-      <div>
-        <h3 className="text-sm font-semibold text-gray-700 mb-2 ml-1">
+      <hr />
+      <div className="flex flex-col justify-center">
+        <h3 className="text-sm font-semibold text-gray-700 mb-2 ml-1 text-center">
           Problemy z załadowaniem
         </h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
           {errorOptions.map((label) => (
             <Button
               key={label}

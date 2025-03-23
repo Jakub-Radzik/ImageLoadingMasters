@@ -4,31 +4,26 @@ import { useState } from "react";
 type ImagesProps = {
   imageA: string;
   imageB: string;
+  isImageALoaded: boolean;
+  isImageBLoaded: boolean;
+  setIsImageALoaded: () => void;
+  setIsImageBLoaded: () => void;
   onClick: (response: "Obraz A" | "Obraz B") => void;
 };
 
-export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
-  const [isImageALoaded, setImageALoaded] = useState(false);
-  const [isImageBLoaded, setImageBLoaded] = useState(false);
-
+export const Images = ({
+  imageA,
+  imageB,
+  onClick,
+  isImageALoaded,
+  isImageBLoaded,
+  setIsImageALoaded,
+  setIsImageBLoaded,
+}: ImagesProps) => {
   const clickable = typeof onClick === "function";
 
-  const cardClasses =
-    "w-full object-contain rounded shadow transition-transform hover:scale-105";
-  const wrapperClasses = clickable
-    ? "rounded-lg overflow-hidden hover:shadow-lg cursor-pointer transition"
-    : "";
-
-  const onAClick = () => {
-    setImageALoaded(false);
-    setImageBLoaded(false);
-    allLoaded && onClick("Obraz A");
-  };
-  const onBClick = () => {
-    setImageALoaded(false);
-    setImageBLoaded(false);
-    allLoaded && onClick("Obraz B");
-  };
+  const cardClasses = "w-full object-contain rounded shadow";
+  const wrapperClasses = clickable ? "rounded-lg overflow-hidden" : "";
 
   const allLoaded = isImageALoaded && isImageBLoaded;
 
@@ -54,7 +49,6 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
       <div className="flex flex-col sm:flex-row gap-4">
         <div
           className={`flex flex-col w-full sm:w-1/2 items-center ${wrapperClasses}`}
-          onClick={onAClick}
         >
           <span className="text-center font-medium my-2">Option A</span>
           {!isImageALoaded && (
@@ -67,12 +61,11 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
             src={imageA}
             alt="Image A"
             className={cardClasses}
-            onLoad={() => setImageALoaded(true)}
+            onLoad={setIsImageALoaded}
           />
         </div>
         <div
           className={`flex flex-col w-full sm:w-1/2 items-center ${wrapperClasses}`}
-          onClick={onBClick}
         >
           <span className="text-center font-medium my-2">Option B</span>
           {!isImageBLoaded && (
@@ -85,7 +78,7 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
             src={imageB}
             alt="Image B"
             className={cardClasses}
-            onLoad={() => setImageBLoaded(true)}
+            onLoad={setIsImageBLoaded}
           />
         </div>
       </div>

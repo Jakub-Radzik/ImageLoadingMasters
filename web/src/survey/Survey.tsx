@@ -27,9 +27,13 @@ export const Survey = () => {
   const [loading, setLoading] = useState(false);
   const [info, setInfo] = useState("");
   const [error, setError] = useState(false);
+  const [isImageALoaded, setIsImageALoaded] = useState(false);
+  const [isImageBLoaded, setIsImageBLoaded] = useState(false);
 
   const next = () => {
     setCurrent((prev) => prev + 1);
+    setIsImageALoaded(false);
+    setIsImageBLoaded(false);
   };
 
   const onFeedback = (feedback: string) => {
@@ -94,17 +98,13 @@ export const Survey = () => {
         <p className="mb-4 text-lg text-gray-700">
           Zostanie ci przedstawione około 30 par obrazów. Dla każdej pary proszę
           dokładnie przyjrzeć się obu obrazom i zdecydować, który wygląda lepiej
-          pod względem jakości.
+          pod względem jakości. Pamiętaj, że jesli wybor jest trudny - zawsze
+          możesz wybrać opcję "oba jakościowo dobre" lub "oba jakościowo złe".
         </p>
         <p>
           <b>Ankieta zapisuje się dopiero po jej ukończeniu</b>
         </p>
-        <p
-          className="text-lg"
-          style={{
-            backgroundColor: "#e20000",
-          }}
-        >
+        <p className="text-lg">
           <b>
             <ul>
               <li>W ankecie pojawiają się 3 typy obrazów.</li>
@@ -127,14 +127,12 @@ export const Survey = () => {
         <div className="text-left bg-gray-50 rounded-lg p-4 border mb-4">
           <p className="mb-2 font-semibold">Jak ocenić obrazy?</p>
           <p className="mb-2">
-            Oceny dokonujemy poprzez <b>kliknięcie obrazu</b>, który wydaje się
-            być lepszej jakości.
+            Oceny dokonujemy poprzez <b>kliknięcie przycisku pod obrazami</b>.
           </p>
-          <p className="mb-1">
-            W przypadku braku możliwości podjęcia decyzji, wybierz jedną z
-            opcji:
-          </p>
+          <p className="mb-1">Dostępne opcje to:</p>
           <ul className="list-disc list-inside mb-2 text-gray-700">
+            <li>Obraz A</li>
+            <li>Obraz B</li>
             <li>Oba jakościowo dobre</li>
             <li>Oba jakościowo złe</li>
           </ul>
@@ -209,28 +207,35 @@ export const Survey = () => {
 
   return (
     <div
-      className="p-6 mx-auto"
+      className="mx-auto"
       style={{
         maxWidth: "900px",
       }}
     >
-      <div>
-        <h1 className="font-semibold">Ankieta</h1>
-        <h2 className="mb-4">
-          Badanie technik optymalizacji ładowania obrazów w aplikacjach
-          mobilnych i webowych
-        </h2>
+      <div
+        className="sticky top-0 bg-white z-10 p-5"
+        style={{
+          boxShadow: "0 0px 4px rgba(0,0,0,0.4)",
+        }}
+      >
+        <b>
+          Twoje zadanie: Oceń które z wyświetlanych zdjęć jest lepsze pod
+          względem jakości.
+        </b>
+        <Progress
+          percent={((current + 1) / comparisons.length) * 100}
+          status="active"
+          showInfo={false}
+        />
       </div>
-
-      <Progress
-        percent={((current + 1) / comparisons.length) * 100}
-        status="active"
-        showInfo={false}
-      />
 
       <Images
         imageA={comparisons[current].imageA}
         imageB={comparisons[current].imageB}
+        isImageALoaded={isImageALoaded}
+        isImageBLoaded={isImageBLoaded}
+        setIsImageALoaded={() => setIsImageALoaded(true)}
+        setIsImageBLoaded={() => setIsImageBLoaded(true)}
         onClick={onFeedback}
       />
 
