@@ -1,10 +1,10 @@
 import { Spin } from "antd";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type ImagesProps = {
   imageA: string;
   imageB: string;
-  onClick?: (response: "A" | "B") => void;
+  onClick: (response: "A" | "B") => void;
 };
 
 export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
@@ -19,12 +19,23 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
     ? "rounded-lg overflow-hidden hover:shadow-lg cursor-pointer transition"
     : "";
 
+  const onAClick = () => {
+    setImageALoaded(false);
+    setImageBLoaded(false);
+    onClick("A");
+  };
+  const onBClick = () => {
+    setImageALoaded(false);
+    setImageBLoaded(false);
+    onClick("B");
+  };
+
   return (
     <div className="p-4">
       <div className="flex flex-col sm:flex-row gap-4">
         <div
           className={`flex flex-col w-full sm:w-1/2 items-center ${wrapperClasses}`}
-          onClick={() => clickable && onClick("A")}
+          onClick={onAClick}
         >
           <span className="text-center font-medium my-2">Option A</span>
           {!isImageALoaded && (
@@ -42,7 +53,7 @@ export const Images = ({ imageA, imageB, onClick }: ImagesProps) => {
         </div>
         <div
           className={`flex flex-col w-full sm:w-1/2 items-center ${wrapperClasses}`}
-          onClick={() => clickable && onClick("B")}
+          onClick={onBClick}
         >
           <span className="text-center font-medium my-2">Option B</span>
           {!isImageBLoaded && (
