@@ -2,9 +2,7 @@ import { useState, useEffect } from "react";
 import { Button, Progress, Spin } from "antd";
 import { Images } from "./components/Images";
 import { FeedbackButtons } from "./components/FeedbackButtons";
-import { SETTING, imageComparisons, settings } from "./utils/settings";
-
-const comparisons = imageComparisons;
+import { COMPARISONS, SETTING, SETTINGS } from "./utils/settings";
 
 type ANSWER = {
   index: number;
@@ -19,7 +17,13 @@ type REQUEST = {
   userAgent: string;
 };
 
-export const Survey = () => {
+export const Survey = ({
+  comparisons,
+  settings,
+}: {
+  comparisons: COMPARISONS;
+  settings: SETTINGS;
+}) => {
   const [current, setCurrent] = useState(0);
   const [showWelcome, setShowWelcome] = useState(true);
   const [answers, setAnswers] = useState<ANSWER[]>([]);
