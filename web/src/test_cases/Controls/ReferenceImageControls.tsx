@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { Compression, FORMAT } from "../utils/url";
+import { Compression, FORMAT } from "../../utils/url";
 
 export const ReferenceImageControls = () => {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
-import { Compression, directoryToUrlMap, FORMAT } from "../utils/url";
-import { ReferenceImageControls } from "./ReferenceImageControls";
+import { Compression, directoryToUrlMap, FORMAT } from "../../utils/url";
+import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
 
 export const ReferenceImages = () => {
   const [searchParams] = useSearchParams();
