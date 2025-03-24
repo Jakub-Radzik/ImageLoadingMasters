@@ -1,0 +1,277 @@
+{
+  "answers": [
+    {
+      "index": 0,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 10,
+        "image": 1
+      }
+    },
+    {
+      "index": 1,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 10,
+        "image": 2
+      }
+    },
+    {
+      "index": 2,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 10,
+        "image": 3
+      }
+    },
+    {
+      "index": 3,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 40,
+        "image": 1
+      }
+    },
+    {
+      "index": 4,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 40,
+        "image": 2
+      }
+    },
+    {
+      "index": 5,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 40,
+        "image": 3
+      }
+    },
+    {
+      "index": 6,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 7,
+      "feedback": "Obraz B",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 8,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 3
+      }
+    },
+    {
+      "index": 9,
+      "feedback": "Oba jakościowe złe",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 10,
+        "image": 1
+      }
+    },
+    {
+      "index": 10,
+      "feedback": "Oba jakościowe złe",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 10,
+        "image": 2
+      }
+    },
+    {
+      "index": 11,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 10,
+        "image": 3
+      }
+    },
+    {
+      "index": 12,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 40,
+        "image": 1
+      }
+    },
+    {
+      "index": 13,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 40,
+        "image": 2
+      }
+    },
+    {
+      "index": 14,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 40,
+        "image": 3
+      }
+    },
+    {
+      "index": 15,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 16,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 17,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "avif",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 3
+      }
+    },
+    {
+      "index": 18,
+      "feedback": "Obraz A",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 10,
+        "image": 1
+      }
+    },
+    {
+      "index": 19,
+      "feedback": "Obraz A",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 10,
+        "image": 2
+      }
+    },
+    {
+      "index": 20,
+      "feedback": "Obraz A",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 10,
+        "image": 3
+      }
+    },
+    {
+      "index": 21,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 40,
+        "image": 1
+      }
+    },
+    {
+      "index": 22,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 40,
+        "image": 2
+      }
+    },
+    {
+      "index": 23,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 40,
+        "image": 3
+      }
+    },
+    {
+      "index": 24,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 25,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 26,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "webp",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 3
+      }
+    }
+  ],
+  "width": 411,
+  "height": 784,
+  "userAgent": "Mozilla/5.0 (Linux; Android 16; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.6998.40 Mobile Safari/537.36"
+}
