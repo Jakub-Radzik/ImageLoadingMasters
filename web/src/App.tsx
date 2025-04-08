@@ -9,11 +9,17 @@ import {
   losslessImageComparisons,
   pngSettings,
 } from "./survey/utils/settings";
+import { ResponsiveClownCar } from "./test_cases/Techniques/Responsive_ClownCar";
+import { directoryToUrlMap } from "./utils/url";
+import { TechniquesRoutes } from "./test_cases/TechniqueRoutes";
 
 function App() {
+  const path = window.location.pathname;
+  const show = path !== "/" && path !== "/extension";
+
   return (
     <>
-      <TestPageLayout>
+      <TestPageLayout show={show}>
         <Routes>
           <Route path="/ref" element={<ReferenceImage />} />
           <Route path="/refs" element={<ReferenceImages />} />
@@ -35,6 +41,7 @@ function App() {
               />
             }
           />
+          <Route path="/techniques/*" element={<TechniquesRoutes />} />
         </Routes>
       </TestPageLayout>
     </>
