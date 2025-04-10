@@ -1,12 +1,16 @@
-import { FC, ImgHTMLAttributes } from 'react';
-import { Helmet } from 'react-helmet';
+import { FC, ImgHTMLAttributes } from "react";
+import { Helmet } from "react-helmet";
 
 interface PreloadedImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   imageUrl: string;
   alt?: string;
 }
 
-const PreloadedImage: FC<PreloadedImageProps> = ({ imageUrl, alt = 'Image', ...props }) => {
+const PreloadedImage: FC<PreloadedImageProps> = ({
+  imageUrl,
+  alt = "Image",
+  ...props
+}) => {
   return (
     <>
       <Helmet>

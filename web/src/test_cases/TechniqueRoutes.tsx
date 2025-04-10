@@ -2,6 +2,8 @@ import { Route, Routes, useSearchParams } from "react-router-dom";
 import { ResponsiveClownCar } from "./Techniques/Responsive_ClownCar";
 import { directoryToUrlMap } from "../utils/url";
 import { ResponsiveHTML } from "./Techniques/Responsive_HTML";
+import LazyImage from "./Techniques/LazyImage";
+import PreloadedImage from "./Techniques/PreloadImage";
 
 export const TechniquesRoutes = () => {
   const [searchParams] = useSearchParams();
@@ -22,6 +24,34 @@ export const TechniquesRoutes = () => {
   return (
     <>
       <Routes>
+        <Route
+          path="/lls"
+          element={
+            <>
+              <LazyImage imageUrl={big1} alt={"1"} />
+              <div style={{ height: "1500px" }} />
+              <LazyImage imageUrl={big2} alt={"2"} />
+              <div style={{ height: "1500px" }} />
+              <LazyImage imageUrl={big3} alt={"3"} />
+            </>
+          }
+        />
+        <Route
+          path="/pls"
+          element={
+            <>
+              <PreloadedImage imageUrl={big1} alt={"1"} />
+              <PreloadedImage imageUrl={big2} alt={"2"} />
+              <PreloadedImage imageUrl={big3} alt={"3"} />
+            </>
+          }
+        />
+
+        <Route
+          path="/pl"
+          element={<PreloadedImage imageUrl={bigJpeg} alt={"jpeg"} />}
+        />
+
         <Route
           path="/cct"
           element={
