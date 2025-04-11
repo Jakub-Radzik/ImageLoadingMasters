@@ -4,6 +4,7 @@ import { directoryToUrlMap } from "../utils/url";
 import { ResponsiveHTML } from "./Techniques/Responsive_HTML";
 import LazyImage from "./Techniques/LazyImage";
 import PreloadedImage from "./Techniques/PreloadImage";
+import { AdaptiveNetwork } from "./Techniques/Adaptive_Network";
 
 export const TechniquesRoutes = () => {
   const [searchParams] = useSearchParams();
@@ -24,6 +25,43 @@ export const TechniquesRoutes = () => {
   return (
     <>
       <Routes>
+        <Route
+          path="/hisrc"
+          element={
+            <AdaptiveNetwork
+              slowSrc={smallJpeg}
+              mediumSrc={smallJpeg}
+              fastSrc={bigJpeg}
+              altText={"Nothing"}
+            />
+          }
+        />
+        <Route
+          path="/hisrcs"
+          element={
+            <>
+              <AdaptiveNetwork
+                slowSrc={small1}
+                mediumSrc={small1}
+                fastSrc={big1}
+                altText={"Nothing"}
+              />
+              <AdaptiveNetwork
+                slowSrc={small2}
+                mediumSrc={small2}
+                fastSrc={big2}
+                altText={"Nothing"}
+              />
+              <AdaptiveNetwork
+                slowSrc={small3}
+                mediumSrc={small3}
+                fastSrc={big3}
+                altText={"Nothing"}
+              />
+            </>
+          }
+        />
+
         <Route
           path="/lls"
           element={
