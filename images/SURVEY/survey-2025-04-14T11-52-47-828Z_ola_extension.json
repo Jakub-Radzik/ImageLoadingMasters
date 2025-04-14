@@ -1,0 +1,97 @@
+{
+  "answers": [
+    {
+      "index": 0,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "avif",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 1,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "avif",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 2,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "avif",
+        "quality": 90,
+        "image": 3
+      }
+    },
+    {
+      "index": 3,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 4,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 5,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 3
+      }
+    },
+    {
+      "index": 6,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 7,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 8,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 3
+      }
+    }
+  ],
+  "width": 414,
+  "height": 699,
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/22B83 Safari/604.1"
+}

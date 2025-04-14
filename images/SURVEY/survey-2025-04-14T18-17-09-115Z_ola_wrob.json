@@ -2,7 +2,7 @@
   "answers": [
     {
       "index": 0,
-      "feedback": "Oba jakościowo dobre",
+      "feedback": "Obraz B",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -22,7 +22,7 @@
     },
     {
       "index": 2,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowe złe",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -32,7 +32,7 @@
     },
     {
       "index": 3,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -42,7 +42,7 @@
     },
     {
       "index": 4,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -52,7 +52,7 @@
     },
     {
       "index": 5,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowe złe",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -62,7 +62,7 @@
     },
     {
       "index": 6,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowe złe",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -72,7 +72,7 @@
     },
     {
       "index": 7,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -82,7 +82,7 @@
     },
     {
       "index": 8,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "webp",
@@ -92,7 +92,7 @@
     },
     {
       "index": 9,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -102,7 +102,7 @@
     },
     {
       "index": 10,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -112,7 +112,7 @@
     },
     {
       "index": 11,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -122,7 +122,7 @@
     },
     {
       "index": 12,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -132,7 +132,7 @@
     },
     {
       "index": 13,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -152,7 +152,7 @@
     },
     {
       "index": 15,
-      "feedback": "Obraz B",
+      "feedback": "Obraz A",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -162,7 +162,7 @@
     },
     {
       "index": 16,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -172,7 +172,7 @@
     },
     {
       "index": 17,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "avif",
         "formatB": "jpg",
@@ -182,7 +182,7 @@
     },
     {
       "index": 18,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowe złe",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -192,7 +192,7 @@
     },
     {
       "index": 19,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -202,7 +202,7 @@
     },
     {
       "index": 20,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -212,7 +212,7 @@
     },
     {
       "index": 21,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -222,7 +222,7 @@
     },
     {
       "index": 22,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -232,7 +232,7 @@
     },
     {
       "index": 23,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowe złe",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -242,7 +242,7 @@
     },
     {
       "index": 24,
-      "feedback": "Obraz A",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -252,7 +252,7 @@
     },
     {
       "index": 25,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
@@ -262,16 +262,106 @@
     },
     {
       "index": 26,
-      "feedback": "Obraz B",
+      "feedback": "Oba jakościowo dobre",
       "test": {
         "formatA": "webp",
         "formatB": "jpg",
         "quality": 90,
         "image": 3
       }
+    },
+    {
+      "index": 27,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "avif",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 28,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "avif",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 29,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "avif",
+        "quality": 90,
+        "image": 3
+      }
+    },
+    {
+      "index": 30,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 31,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 32,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "webp",
+        "quality": 90,
+        "image": 3
+      }
+    },
+    {
+      "index": 33,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 2
+      }
+    },
+    {
+      "index": 34,
+      "feedback": "Oba jakościowo dobre",
+      "test": {
+        "formatA": "png",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 1
+      }
+    },
+    {
+      "index": 35,
+      "feedback": "Obraz A",
+      "test": {
+        "formatA": "png",
+        "formatB": "jpg",
+        "quality": 90,
+        "image": 3
+      }
     }
   ],
-  "width": 1680,
-  "height": 910,
-  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
+  "width": 375,
+  "height": 620,
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 [FBAN/FBIOS;FBAV/502.0.0.59.105;FBBV/719281933;FBDV/iPhone13,1;FBMD/iPhone;FBSN/iOS;FBSV/18.4;FBSS/3;FBCR/;FBID/phone;FBLC/pl_PL;FBOP/80]"
 }
