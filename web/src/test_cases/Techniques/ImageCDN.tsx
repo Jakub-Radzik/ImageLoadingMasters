@@ -5,12 +5,17 @@ import {
   HTTP_VER_TO_CDN_URL,
   directoryToUrlMap,
 } from "../../utils/url";
-import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
 
-export const ImageCDN = ({ httpVer }: { httpVer: 2 | 3 }) => {
+export const ImageCDN = ({
+  httpVer,
+  img_param,
+}: {
+  httpVer: 2 | 3;
+  img_param?: number;
+}) => {
   const [searchParams] = useSearchParams();
   const dir = searchParams.get("dir") as FORMAT | null;
-  const img = parseInt(searchParams.get("img") || "0");
+  const img = img_param ? img_param : parseInt(searchParams.get("img") || "0");
   const w = parseInt(searchParams.get("w") || "0");
   const q = parseInt(searchParams.get("q") || "-1");
   const c = (searchParams.get("c") || "lossless") as Compression;
@@ -29,7 +34,6 @@ export const ImageCDN = ({ httpVer }: { httpVer: 2 | 3 }) => {
       </div>
       <div>URL: {url}</div>
       <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
-      <ReferenceImageControls />
     </>
   );
 };

@@ -6,6 +6,7 @@ import LazyImage from "./Techniques/LazyImage";
 import PreloadedImage from "./Techniques/PreloadImage";
 import { AdaptiveNetwork } from "./Techniques/Adaptive_Network";
 import { ImageCDN } from "./Techniques/ImageCDN";
+import { ReferenceImageControls } from "./Controls/ReferenceImageControls";
 
 export const TechniquesRoutes = () => {
   const [searchParams] = useSearchParams();
@@ -26,8 +27,47 @@ export const TechniquesRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/cdn2" element={<ImageCDN httpVer={2} />} />
-        <Route path="/cdn3" element={<ImageCDN httpVer={3} />} />
+        <Route
+          path="/cdn2"
+          element={
+            <>
+              <ImageCDN httpVer={2} />
+              <ReferenceImageControls />
+            </>
+          }
+        />
+        <Route
+          path="/cdn3"
+          element={
+            <>
+              <ImageCDN httpVer={3} />
+              <ReferenceImageControls />
+            </>
+          }
+        />
+
+        <Route
+          path="/cdns2"
+          element={
+            <>
+              <ImageCDN httpVer={2} img_param={1} />
+              <ImageCDN httpVer={2} img_param={2} />
+              <ImageCDN httpVer={2} img_param={3} />
+              <ReferenceImageControls />
+            </>
+          }
+        />
+        <Route
+          path="/cdns3"
+          element={
+            <>
+              <ImageCDN httpVer={3} img_param={1} />
+              <ImageCDN httpVer={3} img_param={2} />
+              <ImageCDN httpVer={3} img_param={3} />
+              <ReferenceImageControls />
+            </>
+          }
+        />
 
         <Route
           path="/hisrc"
