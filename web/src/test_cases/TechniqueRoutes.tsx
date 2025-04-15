@@ -5,6 +5,7 @@ import { ResponsiveHTML } from "./Techniques/Responsive_HTML";
 import LazyImage from "./Techniques/LazyImage";
 import PreloadedImage from "./Techniques/PreloadImage";
 import { AdaptiveNetwork } from "./Techniques/Adaptive_Network";
+import { ImageCDN } from "./Techniques/ImageCDN";
 
 export const TechniquesRoutes = () => {
   const [searchParams] = useSearchParams();
@@ -25,6 +26,9 @@ export const TechniquesRoutes = () => {
   return (
     <>
       <Routes>
+        <Route path="/cdn2" element={<ImageCDN httpVer={2} />} />
+        <Route path="/cdn3" element={<ImageCDN httpVer={3} />} />
+
         <Route
           path="/hisrc"
           element={
