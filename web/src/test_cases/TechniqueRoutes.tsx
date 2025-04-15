@@ -7,6 +7,7 @@ import PreloadedImage from "./Techniques/PreloadImage";
 import { AdaptiveNetwork } from "./Techniques/Adaptive_Network";
 import { ImageCDN } from "./Techniques/ImageCDN";
 import { ReferenceImageControls } from "./Controls/ReferenceImageControls";
+import { ImageCDNs } from "./Techniques/ImageCDNs";
 
 export const TechniquesRoutes = () => {
   const [searchParams] = useSearchParams();
@@ -50,9 +51,7 @@ export const TechniquesRoutes = () => {
           path="/cdns2"
           element={
             <>
-              <ImageCDN httpVer={2} img_param={1} />
-              <ImageCDN httpVer={2} img_param={2} />
-              <ImageCDN httpVer={2} img_param={3} />
+              <ImageCDNs httpVer={2} />
               <ReferenceImageControls />
             </>
           }
@@ -61,9 +60,7 @@ export const TechniquesRoutes = () => {
           path="/cdns3"
           element={
             <>
-              <ImageCDN httpVer={3} img_param={1} />
-              <ImageCDN httpVer={3} img_param={2} />
-              <ImageCDN httpVer={3} img_param={3} />
+              <ImageCDNs httpVer={3} />
               <ReferenceImageControls />
             </>
           }
