@@ -11,7 +11,7 @@ export const HTTP_VER_TO_CDN_URL = {
   3: CDN_HTTP_3_URL,
 };
 
-const READ_URL = CDN_HTTP_2_URL;
+const READ_URL = BUCKET_URL;
 
 export type FORMAT = "avif" | "webp" | "jpg" | "png" | "ref"; // ! ref files are png
 
