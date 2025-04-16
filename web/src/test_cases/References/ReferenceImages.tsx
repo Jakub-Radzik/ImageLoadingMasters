@@ -29,19 +29,6 @@ export const ReferenceImages = () => {
 
   return (
     <>
-      <div>
-        Settings: [dir]:{dir} [img]:1,2,3 [width]:{w} [quality/lvl]:{q}
-        interlaced: {`${interlaced}`}
-      </div>
-      <div>
-        URL: {url1} {url2} {url3}
-      </div>
-      <div>WARNINGS: </div>
-      <div>
-        {warnings.map(({ show, info }) => {
-          return show ? <p>{info}</p> : null;
-        })}
-      </div>
       <div className="flex flex-row w-full">
         <img
           className="w-1/3 object-cover"
@@ -61,6 +48,19 @@ export const ReferenceImages = () => {
       </div>
 
       <ReferenceImageControls />
+      <div>
+        Settings: [dir]:{dir} [img]:1,2,3 [width]:{w} [quality/lvl]:{q}
+        interlaced: {`${interlaced}`}
+      </div>
+      <div>
+        URL: {url1} {url2} {url3}
+      </div>
+      <div>WARNINGS: </div>
+      <div>
+        {warnings.map(({ show, info }) => {
+          return show ? <p>{info}</p> : null;
+        })}
+      </div>
     </>
   );
 };
