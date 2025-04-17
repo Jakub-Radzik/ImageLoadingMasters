@@ -27,6 +27,8 @@ export const ReferenceImage = () => {
 
   return (
     <>
+      <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
+      <ReferenceImageControls />
       <div>
         Settings: [dir]:{dir} [img]:{img} [width]:{w} [quality/lvl]:{q}
         interlaced: {`${interlaced}`}
@@ -38,8 +40,6 @@ export const ReferenceImage = () => {
           return show ? <p>{info}</p> : null;
         })}
       </div>
-      <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
-      <ReferenceImageControls />
     </>
   );
 };
