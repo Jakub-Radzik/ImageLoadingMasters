@@ -82,6 +82,19 @@ export const TechniquesRoutes = () => {
             </>
           }
         />
+
+        <Route
+          path="/lls/ref"
+          element={
+            <>
+              <img src={big1} alt={"alt"} />
+              <div style={{ height: "1500px" }} />
+              <img src={big2} alt={"alt"} />
+              <div style={{ height: "1500px" }} />
+              <img src={big3} alt={"alt"} />
+            </>
+          }
+        />
         <Route
           path="/pls"
           element={
