@@ -28,12 +28,12 @@ export const ImageCDN = ({
 
   return (
     <>
+      <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
       <div>
         Settings: [dir]:{dir} [img]:{img} [width]:{w} [quality/lvl]:{q}
         interlaced: {`${interlaced}`}
       </div>
       <div>URL: {url}</div>
-      <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
     </>
   );
 };
