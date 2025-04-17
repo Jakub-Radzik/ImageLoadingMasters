@@ -47,7 +47,7 @@ export const TechniquesRoutes = () => {
         <Route
           path="/hisrcs"
           element={
-            <>
+            <div className="flex flex-row w-full">
               <AdaptiveNetwork
                 slowSrc={small1}
                 mediumSrc={small1}
@@ -66,7 +66,7 @@ export const TechniquesRoutes = () => {
                 fastSrc={big3}
                 altText={"Nothing"}
               />
-            </>
+            </div>
           }
         />
 

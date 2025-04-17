@@ -39,10 +39,5 @@ export const AdaptiveNetwork: React.FC<AdaptiveNetworkProps> = ({
     }
   }, [slowSrc, mediumSrc, fastSrc]);
 
-  return (
-    <>
-      <h1>Adaptive Network - {speed}</h1>
-      <img src={selectedSrc} alt={altText} />
-    </>
-  );
+  return <img className="w-1/3 object-cover" src={selectedSrc} alt={altText} />;
 };
