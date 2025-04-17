@@ -75,9 +75,9 @@ export const TechniquesRoutes = () => {
           element={
             <>
               <LazyImage imageUrl={big1} alt={"1"} />
-              <div style={{ height: "1500px" }} />
+              <div style={{ height: "2500px" }} />
               <LazyImage imageUrl={big2} alt={"2"} />
-              <div style={{ height: "1500px" }} />
+              <div style={{ height: "2500px" }} />
               <LazyImage imageUrl={big3} alt={"3"} />
             </>
           }
@@ -88,9 +88,9 @@ export const TechniquesRoutes = () => {
           element={
             <>
               <img src={big1} alt={"alt"} />
-              <div style={{ height: "1500px" }} />
+              <div style={{ height: "2500px" }} />
               <img src={big2} alt={"alt"} />
-              <div style={{ height: "1500px" }} />
+              <div style={{ height: "2500px" }} />
               <img src={big3} alt={"alt"} />
             </>
           }
