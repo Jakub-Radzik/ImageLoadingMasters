@@ -6,7 +6,6 @@ import LazyImage from "./Techniques/LazyImage";
 import PreloadedImage from "./Techniques/PreloadImage";
 import { AdaptiveNetwork } from "./Techniques/Adaptive_Network";
 import { ImageCDN } from "./Techniques/ImageCDN";
-import { ReferenceImageControls } from "./Controls/ReferenceImageControls";
 import { ImageCDNs } from "./Techniques/ImageCDNs";
 
 export const TechniquesRoutes = () => {
@@ -144,7 +143,7 @@ export const TechniquesRoutes = () => {
         <Route
           path="/html5s"
           element={
-            <>
+            <div className="flex flex-row w-full">
               <ResponsiveHTML
                 smallSrc={small1}
                 largeSrc={big1}
@@ -160,7 +159,7 @@ export const TechniquesRoutes = () => {
                 largeSrc={big3}
                 altText={"Nothing"}
               />
-            </>
+            </div>
           }
         />
       </Routes>
