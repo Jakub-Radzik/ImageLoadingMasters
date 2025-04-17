@@ -28,43 +28,11 @@ export const TechniquesRoutes = () => {
   return (
     <>
       <Routes>
-        <Route
-          path="/cdn2"
-          element={
-            <>
-              <ImageCDN httpVer={2} />
-              <ReferenceImageControls />
-            </>
-          }
-        />
-        <Route
-          path="/cdn3"
-          element={
-            <>
-              <ImageCDN httpVer={3} />
-              <ReferenceImageControls />
-            </>
-          }
-        />
+        <Route path="/cdn2" element={<ImageCDN httpVer={2} />} />
+        <Route path="/cdn3" element={<ImageCDN httpVer={3} />} />
 
-        <Route
-          path="/cdns2"
-          element={
-            <>
-              <ImageCDNs httpVer={2} />
-              <ReferenceImageControls />
-            </>
-          }
-        />
-        <Route
-          path="/cdns3"
-          element={
-            <>
-              <ImageCDNs httpVer={3} />
-              <ReferenceImageControls />
-            </>
-          }
-        />
+        <Route path="/cdns2" element={<ImageCDNs httpVer={2} />} />
+        <Route path="/cdns3" element={<ImageCDNs httpVer={3} />} />
 
         <Route
           path="/hisrc"

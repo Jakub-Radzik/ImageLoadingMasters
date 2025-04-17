@@ -34,12 +34,6 @@ export const ReferenceImage = () => {
         interlaced: {`${interlaced}`}
       </div>
       <div>URL: {url}</div>
-      <div>WARNINGS: </div>
-      <div>
-        {warnings.map(({ show, info }) => {
-          return show ? <p>{info}</p> : null;
-        })}
-      </div>
     </>
   );
 };

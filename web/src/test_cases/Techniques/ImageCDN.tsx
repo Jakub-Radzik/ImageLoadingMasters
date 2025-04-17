@@ -5,6 +5,7 @@ import {
   HTTP_VER_TO_CDN_URL,
   directoryToUrlMap,
 } from "../../utils/url";
+import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
 
 export const ImageCDN = ({
   httpVer,
@@ -29,6 +30,7 @@ export const ImageCDN = ({
   return (
     <>
       <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
+      <ReferenceImageControls />
       <div>
         Settings: [dir]:{dir} [img]:{img} [width]:{w} [quality/lvl]:{q}
         interlaced: {`${interlaced}`}
