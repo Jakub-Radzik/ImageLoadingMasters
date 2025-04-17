@@ -1,6 +1,6 @@
 // https://images-loading-bucket-eu.s3.eu-central-1.amazonaws.com/AVIF_LOSSLESS/1_w1920_lvl0_lossless.avif
 
-const BUCKET_URL =
+export const BUCKET_URL =
   "https://images-loading-bucket-eu.s3.eu-central-1.amazonaws.com";
 
 const CDN_HTTP_2_URL = "https://d1jjpdvrylik03.cloudfront.net";

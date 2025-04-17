@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 interface LayoutProps {
   children: React.ReactNode;
   show?: boolean;
@@ -21,6 +23,14 @@ export const TestPageLayout: React.FC<LayoutProps> = ({ children, show }) => {
       </main>
 
       <footer className="text-center text-gray-600 py-4 mt-6 border-t">
+        <div className="flex gap-5">
+          <Link to={"/ref"}>REF</Link>
+          <Link to={"/refs"}>REFS</Link>
+          <Link to={"/cdn2"}>CDN HTTP2</Link>
+          <Link to={"/cdns2"}>CDNs HTTP2</Link>
+          <Link to={"/cdn3"}>CDN HTTP3</Link>
+          <Link to={"/cdns3"}>CDNs HTTP3</Link>
+        </div>
         © {new Date().getFullYear()} Testowanie Obrazów - React & TypeScript
       </footer>
     </div>

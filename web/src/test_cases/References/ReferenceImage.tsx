@@ -1,8 +1,14 @@
 import { useSearchParams } from "react-router-dom";
-import { Compression, directoryToUrlMap, FORMAT } from "../../utils/url";
+import {
+  BUCKET_URL,
+  Compression,
+  directoryToUrlMap,
+  FORMAT,
+  HTTP_VER_TO_CDN_URL,
+} from "../../utils/url";
 import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
 
-export const ReferenceImage = () => {
+export const ReferenceImage = ({ httpVer }: { httpVer?: 2 | 3 }) => {
   const [searchParams] = useSearchParams();
   const dir = searchParams.get("dir") as FORMAT | null;
   const img = parseInt(searchParams.get("img") || "0");
@@ -12,7 +18,16 @@ export const ReferenceImage = () => {
   const interlaced = searchParams.get("interlaced") === "true" ? true : false;
 
   const urlGen = dir ? directoryToUrlMap[dir] : null;
-  const url = urlGen ? urlGen(img, w, q, c, interlaced) : "";
+  const url = urlGen
+    ? urlGen(
+        img,
+        w,
+        q,
+        c,
+        interlaced,
+        httpVer ? HTTP_VER_TO_CDN_URL[httpVer] : BUCKET_URL
+      )
+    : "";
 
   const warnings = [
     {

@@ -1,8 +1,14 @@
 import { useSearchParams } from "react-router-dom";
-import { Compression, directoryToUrlMap, FORMAT } from "../../utils/url";
+import {
+  BUCKET_URL,
+  Compression,
+  directoryToUrlMap,
+  FORMAT,
+  HTTP_VER_TO_CDN_URL,
+} from "../../utils/url";
 import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
 
-export const ReferenceImages = () => {
+export const ReferenceImages = ({ httpVer }: { httpVer?: 2 | 3 }) => {
   const [searchParams] = useSearchParams();
   const dir = searchParams.get("dir") as FORMAT | null;
   const w = parseInt(searchParams.get("w") || "0");
@@ -12,9 +18,36 @@ export const ReferenceImages = () => {
 
   const urlGen = dir ? directoryToUrlMap[dir] : null;
 
-  const url1 = urlGen ? urlGen(1, w, q, c, interlaced) : "";
-  const url2 = urlGen ? urlGen(2, w, q, c, interlaced) : "";
-  const url3 = urlGen ? urlGen(3, w, q, c, interlaced) : "";
+  const url1 = urlGen
+    ? urlGen(
+        1,
+        w,
+        q,
+        c,
+        interlaced,
+        httpVer ? HTTP_VER_TO_CDN_URL[httpVer] : BUCKET_URL
+      )
+    : "";
+  const url2 = urlGen
+    ? urlGen(
+        2,
+        w,
+        q,
+        c,
+        interlaced,
+        httpVer ? HTTP_VER_TO_CDN_URL[httpVer] : BUCKET_URL
+      )
+    : "";
+  const url3 = urlGen
+    ? urlGen(
+        3,
+        w,
+        q,
+        c,
+        interlaced,
+        httpVer ? HTTP_VER_TO_CDN_URL[httpVer] : BUCKET_URL
+      )
+    : "";
 
   const warnings = [
     {

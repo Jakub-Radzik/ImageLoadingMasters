@@ -23,24 +23,14 @@ function App() {
         <Routes>
           <Route path="/ref" element={<ReferenceImage />} />
           <Route path="/refs" element={<ReferenceImages />} />
-          <Route
-            path="/"
-            element={
-              <Survey
-                comparisons={fullImageComparisons}
-                settings={fullSettings}
-              />
-            }
-          />
-          <Route
-            path="/extension"
-            element={
-              <Survey
-                comparisons={losslessImageComparisons}
-                settings={pngSettings}
-              />
-            }
-          />
+
+          <Route path="/cdn2" element={<ReferenceImage httpVer={2} />} />
+          <Route path="/cdn3" element={<ReferenceImage httpVer={3} />} />
+
+          <Route path="/cdns2" element={<ReferenceImages httpVer={2} />} />
+          <Route path="/cdns3" element={<ReferenceImages httpVer={3} />} />
+
+          <Route path="/" element={<div>Dziękuje za udział w ankiecie</div>} />
           <Route path="/techniques/*" element={<TechniquesRoutes />} />
         </Routes>
       </TestPageLayout>
