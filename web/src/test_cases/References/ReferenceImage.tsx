@@ -48,7 +48,6 @@ export const ReferenceImage = ({ httpVer }: { httpVer?: 2 | 3 }) => {
         Settings: [dir]:{dir} [img]:{img} [width]:{w} [quality/lvl]:{q}
         interlaced: {`${interlaced}`}
       </div>
-      <div>URL: {url}</div>
     </>
   );
 };

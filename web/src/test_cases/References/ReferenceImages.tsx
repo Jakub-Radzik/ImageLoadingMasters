@@ -81,19 +81,6 @@ export const ReferenceImages = ({ httpVer }: { httpVer?: 2 | 3 }) => {
       </div>
 
       <ReferenceImageControls />
-      <div>
-        Settings: [dir]:{dir} [img]:1,2,3 [width]:{w} [quality/lvl]:{q}
-        interlaced: {`${interlaced}`}
-      </div>
-      <div>
-        URL: {url1} {url2} {url3}
-      </div>
-      <div>WARNINGS: </div>
-      <div>
-        {warnings.map(({ show, info }) => {
-          return show ? <p>{info}</p> : null;
-        })}
-      </div>
     </>
   );
 };
