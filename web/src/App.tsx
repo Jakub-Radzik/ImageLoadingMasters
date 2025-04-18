@@ -5,6 +5,7 @@ import { ReferenceImages } from "./test_cases/References/ReferenceImages";
 
 import { TechniquesRoutes } from "./test_cases/TechniqueRoutes";
 import { PreloadImages } from "./test_cases/References/PreloadImages";
+import { ReferencePreloadImages } from "./test_cases/References/ReferencePreloadImages";
 
 function App() {
   const path = window.location.pathname;
@@ -16,7 +17,9 @@ function App() {
         <Routes>
           <Route path="/ref" element={<ReferenceImage />} />
           <Route path="/refs" element={<ReferenceImages />} />
+
           <Route path="/pres" element={<PreloadImages />} />
+          <Route path="/pref" element={<ReferencePreloadImages />} />
 
           <Route path="/cdn2" element={<ReferenceImage httpVer={2} />} />
           <Route path="/cdn3" element={<ReferenceImage httpVer={3} />} />

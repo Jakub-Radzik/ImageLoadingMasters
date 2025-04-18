@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { Compression, directoryToUrlMap, FORMAT } from "../../utils/url";
 import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
 
-export const PreloadImages = ({ httpVer }: { httpVer?: 2 | 3 }) => {
+export const ReferencePreloadImages = () => {
   const [searchParams] = useSearchParams();
   const dir = searchParams.get("dir") as FORMAT | null;
   const w = parseInt(searchParams.get("w") || "0");
