@@ -6,6 +6,7 @@ import {
   directoryToUrlMap,
 } from "../../utils/url";
 import { ReferenceImageControls } from "../Controls/ReferenceImageControls";
+import { Helmet } from "react-helmet";
 
 export const ImageCDN = ({
   httpVer,
@@ -29,6 +30,16 @@ export const ImageCDN = ({
 
   return (
     <>
+      {httpVer === 3 ? (
+        <Helmet>
+          <link
+            rel="preconnect"
+            href={HTTP_VER_TO_CDN_URL[httpVer]}
+            crossOrigin="anonymous"
+          />
+          {/* <meta http-equiv="x-dns-prefetch-control" content="on"></meta> */}
+        </Helmet>
+      ) : null}
       <img src={url} alt="IMAGE NOT FOUND FOR URL:" />
       <ReferenceImageControls />
       <div>
