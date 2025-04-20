@@ -8,16 +8,35 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "yarn build && vite preview"
+    "preview": "yarn build && vite preview",
+    "test-ref-mobile-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/ref --config-path=./lighthouse.config.3g.mobile.cjs --output html --output json --output-path=./lighthouse/ref-mobile-3g.html",
+    "test-ref-mobile-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/ref --config-path=./lighthouse.config.4g.mobile.cjs --output html --output json --output-path=./lighthouse/ref-mobile-4g.html",
+    "test-ref-desktop-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/ref --config-path=./lighthouse.config.3g.desktop.cjs --output html --output json --output-path=./lighthouse/ref-desktop-3g.html",
+    "test-ref-desktop-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/ref --config-path=./lighthouse.config.4g.desktop.cjs --output html --output json --output-path=./lighthouse/ref-desktop-4g.html",
+    "test-cdn1-mobile-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn1 --config-path=./lighthouse.config.3g.mobile.cjs --output html --output json --output-path=./lighthouse/cdn1-mobile-3g.html",
+    "test-cdn1-mobile-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn1 --config-path=./lighthouse.config.4g.mobile.cjs --output html --output json --output-path=./lighthouse/cdn1-mobile-4g.html",
+    "test-cdn1-desktop-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn1 --config-path=./lighthouse.config.3g.desktop.cjs --output html --output json --output-path=./lighthouse/cdn1-desktop-3g.html",
+    "test-cdn1-desktop-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn1 --config-path=./lighthouse.config.4g.desktop.cjs --output html --output json --output-path=./lighthouse/cdn1-desktop-4g.html",
+    "test-cdn2-mobile-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn2 --config-path=./lighthouse.config.3g.mobile.cjs --output html --output json --output-path=./lighthouse/cdn2-mobile-3g.html",
+    "test-cdn2-mobile-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn2 --config-path=./lighthouse.config.4g.mobile.cjs --output html --output json --output-path=./lighthouse/cdn2-mobile-4g.html",
+    "test-cdn2-desktop-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn2 --config-path=./lighthouse.config.3g.desktop.cjs --output html --output json --output-path=./lighthouse/cdn2-desktop-3g.html",
+    "test-cdn2-desktop-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn2 --config-path=./lighthouse.config.4g.desktop.cjs --output html --output json --output-path=./lighthouse/cdn2-desktop-4g.html",
+    "test-cdn3-mobile-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn3 --config-path=./lighthouse.config.3g.mobile.cjs --output html --output json --output-path=./lighthouse/cdn3-mobile-3g.html",
+    "test-cdn3-mobile-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn3 --config-path=./lighthouse.config.4g.mobile.cjs --output html --output json --output-path=./lighthouse/cdn3-mobile-4g.html",
+    "test-cdn3-desktop-3g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn3 --config-path=./lighthouse.config.3g.desktop.cjs --output html --output json --output-path=./lighthouse/cdn3-desktop-3g.html",
+    "test-cdn3-desktop-4g": "lighthouse https://image-loading-masters.vercel.app/cdn/cdn3 --config-path=./lighthouse.config.4g.desktop.cjs --output html --output json --output-path=./lighthouse/cdn3-desktop-4g.html",
+    "test-all": "npm-run-all --sequential test-*"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
     "antd": "^5.24.4",
+    "npm-run-all": "^4.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^7.4.0",
-    "tailwindcss": "^4.0.14"
+    "tailwindcss": "^4.0.14",
+    "web-vitals": "^4.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

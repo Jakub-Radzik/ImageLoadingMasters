@@ -1,6 +1,15 @@
+import { useEffect } from "react";
 import { directoryToUrlMap, HTTP_VER_TO_CDN_URL } from "../../../utils/url";
+import { onCLS, onLCP, onFCP, onTTFB } from "web-vitals";
 
 export const CdnTest = ({ httpVer }: { httpVer: 0 | 1 | 2 | 3 }) => {
+  useEffect(() => {
+    onFCP(console.log);
+    onLCP(console.log);
+    onCLS(console.log);
+    onTTFB(console.log);
+  }, []);
+
   const jpegGen = directoryToUrlMap["jpg"];
   const avifGen = directoryToUrlMap["avif"];
 
