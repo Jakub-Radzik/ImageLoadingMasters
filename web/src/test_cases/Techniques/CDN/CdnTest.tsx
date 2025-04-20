@@ -14,10 +14,13 @@ export const CdnTest = ({ httpVer }: { httpVer: 0 | 1 | 2 | 3 }) => {
     onCLS(console.log);
     onTTFB(console.log);
 
+    onTTFB(logInSeconds);
     onFCP(logInSeconds);
     onLCP(logInSeconds);
-    onCLS(logInSeconds);
-    onTTFB(logInSeconds);
+
+    onCLS((metric) => {
+      console.log(`${metric.name}: ${metric.value}`);
+    });
   }, []);
 
   const jpegGen = directoryToUrlMap["jpg"];
