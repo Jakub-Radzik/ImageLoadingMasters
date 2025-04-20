@@ -1,6 +1,11 @@
 import { useEffect } from "react";
 import { directoryToUrlMap, HTTP_VER_TO_CDN_URL } from "../../../utils/url";
-import { onCLS, onLCP, onFCP, onTTFB } from "web-vitals";
+import { onCLS, onLCP, onFCP, onTTFB, Metric } from "web-vitals";
+
+const logInSeconds = (metric: Metric) => {
+  const valueInSeconds = (metric.value / 1000).toFixed(3);
+  console.log(`${metric.name}: ${valueInSeconds}s`, metric);
+};
 
 export const CdnTest = ({ httpVer }: { httpVer: 0 | 1 | 2 | 3 }) => {
   useEffect(() => {
@@ -8,6 +13,11 @@ export const CdnTest = ({ httpVer }: { httpVer: 0 | 1 | 2 | 3 }) => {
     onLCP(console.log);
     onCLS(console.log);
     onTTFB(console.log);
+
+    onFCP(logInSeconds);
+    onLCP(logInSeconds);
+    onCLS(logInSeconds);
+    onTTFB(logInSeconds);
   }, []);
 
   const jpegGen = directoryToUrlMap["jpg"];
