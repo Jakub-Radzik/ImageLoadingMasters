@@ -64,7 +64,7 @@ export const CdnTest = ({ httpVer }: { httpVer: 0 | 1 | 2 | 3 }) => {
       </div>
       <div className="flex flex-row w-full justify-center">
         <img
-          className="w-1/2 object-cover"
+          className="object-cover"
           src={url2}
           alt="IMAGE NOT FOUND FOR URL:"
         />
