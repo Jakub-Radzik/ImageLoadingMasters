@@ -3,11 +3,14 @@
 export const BUCKET_URL =
   "https://images-loading-bucket-eu.s3.eu-central-1.amazonaws.com";
 
+const CDN_HTTP_1_URL = "https://d2vvxtdc1vq4xl.cloudfront.net";
 const CDN_HTTP_2_URL = "https://d1jjpdvrylik03.cloudfront.net";
 // const CDN_HTTP_3_URL = "https://d31xee1je64268.cloudfront.net";
 const CDN_HTTP_3_URL = "https://d2h7ftm59hffcl.cloudfront.net";
 
 export const HTTP_VER_TO_CDN_URL = {
+  0: BUCKET_URL,
+  1: CDN_HTTP_1_URL,
   2: CDN_HTTP_2_URL,
   3: CDN_HTTP_3_URL,
 };

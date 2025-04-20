@@ -26,10 +26,16 @@ export const TestPageLayout: React.FC<LayoutProps> = ({ children, show }) => {
         <div className="flex gap-5">
           <Link to={"/ref"}>REF</Link>
           <Link to={"/refs"}>REFS</Link>
-          <Link to={"/cdn2"}>CDN HTTP2</Link>
+          {/* <Link to={"/cdn2"}>CDN HTTP2</Link>
           <Link to={"/cdns2"}>CDNs HTTP2</Link>
           <Link to={"/cdn3"}>CDN HTTP3</Link>
-          <Link to={"/cdns3"}>CDNs HTTP3</Link>
+          <Link to={"/cdns3"}>CDNs HTTP3</Link> */}
+          {/* <Link to={"/cdns3"}>CDNs HTTP3</Link> */}
+
+          <Link to={"/cdn/ref"}>CDN REF</Link>
+          <Link to={"/cdn/cdn1"}>CDN 1</Link>
+          <Link to={"/cdn/cdn2"}>CDN 2</Link>
+          <Link to={"/cdn/cdn3"}>CDN 3</Link>
         </div>
         © {new Date().getFullYear()} Testowanie Obrazów - React & TypeScript
       </footer>

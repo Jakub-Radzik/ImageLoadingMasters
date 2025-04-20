@@ -6,6 +6,7 @@ import { ReferenceImages } from "./test_cases/References/ReferenceImages";
 import { TechniquesRoutes } from "./test_cases/TechniqueRoutes";
 import { PreloadImages } from "./test_cases/References/PreloadImages";
 import { ReferencePreloadImages } from "./test_cases/References/ReferencePreloadImages";
+import { CdnRoutes } from "./test_cases/CdnRoutes";
 
 function App() {
   const path = window.location.pathname;
@@ -18,7 +19,9 @@ function App() {
           <Route path="/ref" element={<ReferenceImage />} />
           <Route path="/refs" element={<ReferenceImages />} />
 
+          {/* DOMAIN SHARDING */}
           <Route path="/pres" element={<PreloadImages />} />
+          {/* DOMAIN SHARDING */}
           <Route path="/pref" element={<ReferencePreloadImages />} />
 
           <Route path="/cdn2" element={<ReferenceImage httpVer={2} />} />
@@ -29,6 +32,8 @@ function App() {
 
           <Route path="/" element={<div>Dziękuje za udział w ankiecie</div>} />
           <Route path="/techniques/*" element={<TechniquesRoutes />} />
+
+          <Route path="/cdn/*" element={<CdnRoutes />} />
         </Routes>
       </TestPageLayout>
     </>
