@@ -16,10 +16,6 @@ export const TestPageLayout: React.FC<LayoutProps> = ({ children, show }) => {
         <section className="border border-gray-300 p-4 rounded-md bg-gray-50">
           {children}
         </section>
-        <p className="text-lg text-gray-700 mb-4 text-center">
-          Tutaj można testować różne techniki ładowania obrazów w rzeczywistych
-          warunkach.
-        </p>
       </main>
 
       <footer className="text-center text-gray-600 py-4 mt-6 border-t">
