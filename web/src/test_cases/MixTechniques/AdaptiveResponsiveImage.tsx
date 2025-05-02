@@ -25,7 +25,7 @@ export const AdaptiveResponsiveImage: React.FC<
     const isSmallScreen = window.innerWidth <= 600;
 
     setSize(window.innerWidth <= 600 ? "small" : "large");
-    setConnection(connection);
+    setConnection(connection?.effectiveType);
 
     const src = isSmallScreen
       ? isFastNetwork
@@ -41,7 +41,7 @@ export const AdaptiveResponsiveImage: React.FC<
   return (
     <>
       {size + " " + connection}
-      <img className="w-1/3 object-cover" src={selectedSrc} alt={altText} />
+      <img src={selectedSrc} alt={altText} />
     </>
   );
 };
