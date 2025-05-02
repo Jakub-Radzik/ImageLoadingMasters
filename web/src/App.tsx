@@ -7,6 +7,7 @@ import { TechniquesRoutes } from "./test_cases/TechniqueRoutes";
 import { PreloadImages } from "./test_cases/References/PreloadImages";
 import { ReferencePreloadImages } from "./test_cases/References/ReferencePreloadImages";
 import { CdnRoutes } from "./test_cases/CdnRoutes";
+import { Mixes } from "./test_cases/Mixes";
 
 function App() {
   const path = window.location.pathname;
@@ -32,6 +33,7 @@ function App() {
 
           <Route path="/" element={<div>Dziękuje za udział w ankiecie</div>} />
           <Route path="/techniques/*" element={<TechniquesRoutes />} />
+          <Route path="/mix/*" element={<Mixes />} />
 
           <Route path="/cdn/*" element={<CdnRoutes />} />
         </Routes>
