@@ -8,15 +8,58 @@ export const Mixes = () => {
   const [searchParams] = useSearchParams();
   const img = parseInt(searchParams.get("img") || "0");
 
+  // JPEG LOSSY
   const bigJpegHighQ = directoryToUrlMap["jpg"](img, 1920, 90, "lossy", false);
   const bigJpegLowQ = directoryToUrlMap["jpg"](img, 1920, 40, "lossy", false);
 
   const smallJpegHighQ = directoryToUrlMap["jpg"](img, 400, 90, "lossy", false);
   const smallJpegLowQ = directoryToUrlMap["jpg"](img, 400, 40, "lossy", false);
+  // AVIS LOSSLESS
+  const bigAVIF = directoryToUrlMap["avif"](img, 1920, 1, "lossless", false);
+  const smallAVIF = directoryToUrlMap["avif"](img, 400, 1, "lossless", false);
+
+  // WEBP LOSSY
+  const bigWEBPHighQ = directoryToUrlMap["webp"](img, 1920, 90, "lossy", false);
+  const bigWEBPLowQ = directoryToUrlMap["webp"](img, 1920, 40, "lossy", false);
+
+  const smallWEBPHighQ = directoryToUrlMap["webp"](
+    img,
+    400,
+    90,
+    "lossy",
+    false
+  );
+  const smallWEBPLowQ = directoryToUrlMap["webp"](img, 400, 40, "lossy", false);
 
   return (
     <>
+      <Route
+        path="/adaptive/avif"
+        element={
+          <AdaptiveResponsiveImage
+            smallSlow={smallAVIF}
+            smallFast={smallAVIF}
+            largeSlow={bigAVIF}
+            largeFast={bigAVIF}
+            altText={"Hisrc + HTML 5.1"}
+          />
+        }
+      />
+
       <Routes>
+        <Route
+          path="/adaptive/webp"
+          element={
+            <AdaptiveResponsiveImage
+              smallSlow={smallWEBPLowQ}
+              smallFast={smallWEBPHighQ}
+              largeSlow={bigWEBPLowQ}
+              largeFast={bigWEBPHighQ}
+              altText={"Hisrc + HTML 5.1"}
+            />
+          }
+        />
+
         {/* HISRC + HTML 5.1 */}
         <Route
           path="/adaptive"
