@@ -33,20 +33,19 @@ export const Mixes = () => {
 
   return (
     <>
-      <Route
-        path="/adaptive/avif"
-        element={
-          <AdaptiveResponsiveImage
-            smallSlow={smallAVIF}
-            smallFast={smallAVIF}
-            largeSlow={bigAVIF}
-            largeFast={bigAVIF}
-            altText={"Hisrc + HTML 5.1"}
-          />
-        }
-      />
-
       <Routes>
+        <Route
+          path="/adaptive/avif"
+          element={
+            <AdaptiveResponsiveImage
+              smallSlow={smallAVIF}
+              smallFast={smallAVIF}
+              largeSlow={bigAVIF}
+              largeFast={bigAVIF}
+              altText={"Hisrc + HTML 5.1"}
+            />
+          }
+        />
         <Route
           path="/adaptive/webp"
           element={
